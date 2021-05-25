@@ -18,7 +18,7 @@ export default function App() {
         <ColorModeContainer>
           
           <Router>
-            <div className="d-flex gap-3">
+            <div className="d-flex gap-4">
 
               <NavLink to="/"
         /* activeClassName="selected" */
@@ -42,29 +42,29 @@ export default function App() {
                            fontWeight: "bold",
                        }}
               >
-                Topics
+                Login
               </NavLink>
-
-              <div className="container my-4">
-                <h1 className="text-center">ToDos App</h1>
-                
-                <Switch>
-                  <Route exact path="/todos">
-                    <Todos />
-                  </Route>
-                  <Route exact path="/login">
-                    <Login />
-                  </Route>
-                  <Route exact path="/">
-                    <Home />
-                  </Route>
-                  {/* <Route path="/404"> */}
-                  {/* <NotFound /> */}
-                  {/* </Route> */}
-                  <Route component="NotFound" />
-                </Switch>
-              </div>
             </div>
+            <div className="container my-4">
+              <h1 className="text-center">ToDos App</h1>
+              
+              <Switch>
+                <Route exact path="/todos">
+                  <Todos />
+                </Route>
+                <Route exact path="/login">
+                  <Login />
+                </Route>
+                <Route exact path="/">
+                  <Home />
+                </Route>
+                {/* <Route path="/404"> */}
+                {/* <NotFound /> */}
+                {/* </Route> */}
+                <Route component="NotFound" />
+              </Switch>
+            </div>
+
           </Router>
         </ColorModeContainer>
     );
