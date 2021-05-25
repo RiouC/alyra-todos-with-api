@@ -27,11 +27,11 @@ const ToggleTodo = ({ todo }) => {
                     dispatch({ type: "TOGGLE", payload: todo })
                 }
             })
-            .catch(error) {
+            .catch(error => {
                 if (isMounted.current) {
                     dispatch({ type: "FETCH_FAILURE", payload: error.message })
                 }
-            }
+            })
         // dispatch({ type: "TOGGLE", payload: todo })
     };
 return (
