@@ -3,7 +3,7 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    Link,
+    // Link,
     NavLink,
 } from "react-router-dom";
 
@@ -18,9 +18,9 @@ export default function App() {
         <ColorModeContainer>
           
           <Router>
-            <div className="d-flex gap-4">
+            <div className="d-flex gap-4 m-3">
 
-              <NavLink to="/"
+              <NavLink exact to="/"
         /* activeClassName="selected" */
                        activeStyle={{
                            fontWeight: "bold",
@@ -29,7 +29,7 @@ export default function App() {
                 Home
               </NavLink>
 
-              <NavLink to="/todos"
+              <NavLink exact to="/todos"
                        activeStyle={{
                            fontWeight: "bold",
                        }}
@@ -37,7 +37,7 @@ export default function App() {
                 Todos
               </NavLink>
 
-              <NavLink to="/login"
+              <NavLink exact to="/login"
                        activeStyle={{
                            fontWeight: "bold",
                        }}
@@ -45,6 +45,7 @@ export default function App() {
                 Login
               </NavLink>
             </div>
+            
             <div className="container my-4">
               <h1 className="text-center">ToDos App</h1>
               

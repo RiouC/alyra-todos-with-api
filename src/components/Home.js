@@ -1,5 +1,7 @@
+import Todos from "./Todos";
+
 const Home = () => {
-    return <button className="btn">Home</button>
+    return <Todos/>;
 };
 
 export default Home;
