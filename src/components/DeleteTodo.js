@@ -14,21 +14,21 @@ const DeleteTodo = ({ todo }) => {
         })
             .then(response => {
                 if (!response.ok) {
-                    throw new Error(`something went wrong ${response.statusText}`)
+                    throw new Error(`something went wrong ${response.statusText}`);
                 }
-                return response.json()
+                return response.json();
             })
             .then(result => {
                 if (isMounted.current) {
-                    dispatch({ type: "DELETE", payload: result })
+                    dispatch({ type: "DELETE", payload: result });
                 }
             })
             .catch(error => {
                 if (isMounted.current) {
-                    dispatch({ type: "FETCH_FAILURE", payload: error.message })
+                    dispatch({ type: "FETCH_FAILURE", payload: error.message });
                 }
-            })
-    }
+            });
+    };
     return (
         <button
           className="btn btn-danger btn-sm"
