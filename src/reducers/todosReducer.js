@@ -4,12 +4,14 @@ export const todosReducer = (state, action) => {
     case "ADD":
         return {
             ...state,
-            todos: [...state.todos, action.payload]
+            todos: [...state.todos, action.payload],
+            loading: false
         };
     case "DELETE":
         return {
             ...state,
-            todos: state.todos.filter((el) => el.id !== action.payload.id)
+            todos: state.todos.filter((el) => el.id !== action.payload.id),
+            loading: false
         };
     case "TOGGLE":
         return {
@@ -22,7 +24,8 @@ export const todosReducer = (state, action) => {
                     };
                 }
                 return el;
-            })
+            }),
+            loading: false
         };
     case "FETCH_INIT":
         return {
