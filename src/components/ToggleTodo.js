@@ -31,7 +31,7 @@ const ToggleTodo = ({ todo }) => {
                 if (isMounted.current) {
                     dispatch({ type: "FETCH_FAILURE", payload: error.message })
                 }
-            })
+            });
         // dispatch({ type: "TOGGLE", payload: todo })
     };
 return (
