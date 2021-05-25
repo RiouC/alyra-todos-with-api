@@ -52,7 +52,7 @@ const Todos = () => {
 
     useEffect(() => {
         dispatch({type: "FETCH_INIT"});
-        fetch(`${process.env.REACT_APP_API_URL}/todos`)
+        fetch(`http://${process.env.REACT_APP_API_URL}/todos`)
             .then(response => {
                 console.log(response);
                 if (!response.ok) {
